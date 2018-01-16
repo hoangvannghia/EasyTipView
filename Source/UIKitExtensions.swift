@@ -94,3 +94,9 @@ extension CGRect {
         return CGPoint(x: self.x + self.width / 2, y: self.y + self.height / 2)
     }
 }
+
+extension CGPoint {
+   func translateByDx(_ dx: CGFloat, dy: CGFloat) -> CGPoint {
+      return CGPoint(x: x + dx, y: y + dy)
+   }
+}

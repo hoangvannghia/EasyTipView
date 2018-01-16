@@ -118,7 +118,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             
             let text = "Tip view inside the navigation controller's view. Tap to dismiss!"
             EasyTipView.show(forView: self.buttonB,
-                withinSuperview: self.navigationController?.view,
+                withinSuperview: nil,
                 text: text,
                 preferences: preferences)
             
@@ -136,7 +136,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             
             let text = "This tip view cannot be presented with the arrow on the top position, so position bottom has been chosen instead. Tap to dismiss."
             EasyTipView.show(forView: buttonC,
-                withinSuperview: navigationController?.view,
+                withinSuperview: nil,
                 text: text,
                 preferences: preferences)
             
@@ -158,7 +158,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.positioning.maxWidth = 150
             
             let view = EasyTipView(text: "Tip view positioned with the arrow on the right. Tap to dismiss.", preferences: preferences)
-            view.show(forView: buttonE, withinSuperview: self.navigationController?.view!)
+            view.show(forView: buttonE, withinSuperview: nil)
             
         case buttonF:
             
